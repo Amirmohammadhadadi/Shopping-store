@@ -37,3 +37,19 @@ adminSchema.pre("save", function (next) {
 const Admin = mongoose.model("Admin", adminSchema)
 
 export default Admin
+
+
+
+
+// // قبل از ذخیره‌سازی
+// adminSchema.pre("save", function(next) {
+//   // this به سند جاری اشاره دارد
+//   console.log("قبل از ذخیره شدن");
+//   next();
+// });
+
+// // بعد از ذخیره‌سازی
+// adminSchema.post("save", function(doc, next) {
+//   console.log("بعد از ذخیره شدن", doc);
+//   next();
+// });

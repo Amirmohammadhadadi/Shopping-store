@@ -14,8 +14,6 @@ export const getAllUser = catchAsync(async (req, res, next) => {
 
 
 
-
-
 export const updateUser = catchAsync(async (req, res, next) => {
   const { id } = req.params;
   const { role, id: userId } = req;
@@ -25,9 +23,9 @@ export const updateUser = catchAsync(async (req, res, next) => {
       runValidators: true,
     });
     return res.status(200).json({
-        success:true,
-        message : "user updated successfuly",
-        user: updatedUser
+      success: true,
+      message: "user updated successfuly",
+      user: updatedUser
     });
   } else {
     return next(new HandleERROR("you dont have permission"));
